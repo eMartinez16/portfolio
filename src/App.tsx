@@ -4,7 +4,7 @@ import { ChatDemo } from './ChatDemo'
 
 type Theme = 'light' | 'dark'
 const ALL = 'Todos'
-const tags: (Tag | typeof ALL)[] = [ALL, 'IA', 'Automatización', 'n8n', 'Juegos', 'Python']
+const tags: (Tag | typeof ALL)[] = [ALL, 'IA', 'Automatización', 'n8n', 'Web', 'IoT', 'Juegos', 'Python']
 
 function useTheme(): [Theme, () => void] {
   const [theme, setTheme] = useState<Theme>(
@@ -144,8 +144,8 @@ export default function App() {
                 <strong>AWS Certified Developer – Associate</strong>.
               </p>
               <p>
-                También trabajo como freelancer en <a href={profile.workana} target="_blank" rel="noopener noreferrer"><strong>Workana</strong></a>, ayudando a comercios a
-                automatizar la atención y la toma de pedidos.
+                Me interesa especialmente ayudar a comercios a automatizar la atención y la toma de
+                pedidos.
               </p>
             </div>
             <ul className="facts">
@@ -205,6 +205,11 @@ export default function App() {
                       ))}
                     </ul>
                     {p.note && <p className="note">{p.note}</p>}
+                    {p.repo && (
+                      <a className="repo-link" href={p.repo} target="_blank" rel="noopener noreferrer">
+                        Ver código en GitHub ↗
+                      </a>
+                    )}
                   </div>
                   <div className="card-actions">
                     <button
@@ -305,13 +310,6 @@ export default function App() {
                 GitHub
               </a>
             </div>
-            <p className="muted small-text">
-              También me encontrás como freelancer en{' '}
-              <a href={profile.workana} target="_blank" rel="noopener noreferrer">
-                Workana
-              </a>
-              .
-            </p>
           </div>
         </section>
       </main>

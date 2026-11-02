@@ -10,7 +10,7 @@ export const profile = {
   workana: 'https://www.workana.com/freelancer/e285e97d38526e193738589dcf43af15',
 }
 
-export type Tag = 'IA' | 'Automatización' | 'n8n' | 'Juegos' | 'Python'
+export type Tag = 'IA' | 'Automatización' | 'n8n' | 'Web' | 'IoT' | 'Juegos' | 'Python'
 
 export type Project = {
   id: string
@@ -20,6 +20,7 @@ export type Project = {
   stack: string[]
   details: string[]
   note?: string
+  repo?: string
   cta?: { label: string; href: string }
 }
 
@@ -73,6 +74,51 @@ export const projects: Project[] = [
       'Se expone como herramienta (MCP) para que los agentes de código consulten el diseño antes de tocar algo.',
       'Evaluado con un set propio de preguntas para medir la calidad de la búsqueda y de las respuestas.',
     ],
+  },
+  {
+    id: 'salimos',
+    title: '¿Salimos? · Planificador de viajes en grupo',
+    summary:
+      'App web para organizar viajes entre amigos en Argentina (piloto: Bariloche). El organizador arma el viaje desde el celular, comparte el link por WhatsApp y cada amigo responde con su presupuesto, que no se muestra a los demás.',
+    tags: ['Web'],
+    stack: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL', 'Vitest', 'Playwright'],
+    details: [
+      'Arma un plan de viaje a partir de las respuestas del grupo y el tope de cada persona en pesos.',
+      'Flujo de pago del alojamiento entre amigos: quién pagó, quién le debe a quién y cuánto.',
+      'Cotización al dólar oficial al cerrar el plan.',
+      'Tests unitarios, de base de datos (pgTAP), simulación de grupos y end-to-end en viewport de celular.',
+    ],
+    note: 'En desarrollo. Repositorio privado.',
+  },
+  {
+    id: 'cosecha',
+    title: 'Cosecha Intuitiva · Monitoreo de invernadero',
+    summary:
+      'Sistema para monitorear un invernadero: un Arduino lee pH, temperatura del agua y temperatura y humedad del ambiente, y un panel web muestra los valores en tiempo real.',
+    tags: ['IoT', 'Python', 'Web'],
+    stack: ['Arduino (C/C++)', 'Python', 'Flask', 'PWA', 'Docker'],
+    details: [
+      'Sensores de pH, DS18B20 (agua) y DHT22 (ambiente) leídos por Arduino y enviados por serial.',
+      'Servidor en Flask con simulación de datos cuando no hay hardware conectado.',
+      'Panel que se actualiza cada 2 segundos y marca alertas si el pH o la temperatura salen de rango.',
+      'Se instala en el celular como PWA y manda alertas con ntfy.',
+    ],
+    note: 'Repositorio privado.',
+  },
+  {
+    id: 'harness',
+    title: 'Harness de agentes de IA',
+    summary:
+      'Mi configuración de trabajo con agentes de código (Claude Code y Cursor) versionada y portable: reglas, hooks, skills y ruteo de modelos por costo, con un instalador para llevarla a otra máquina.',
+    tags: ['IA', 'Automatización'],
+    stack: ['Claude Code', 'Cursor', 'Bash', 'Python', 'Rust', 'MCP'],
+    details: [
+      'Instalador interactivo que hace backup de cada archivo antes de reemplazarlo.',
+      'Ruteo de modelo por costo desde una única fuente de configuración, sincronizada a Claude Code y Cursor.',
+      'Hooks y skills propios compartidos entre las dos herramientas.',
+      'Servidor MCP de solo lectura en Rust que resume los patrones repetidos de uso de herramientas que detecta el harness, ordenados por ahorro estimado de tokens.',
+    ],
+    note: 'Repositorio privado.',
   },
   {
     id: 'n8n-jira',
