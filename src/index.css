@@ -201,3 +201,6 @@ h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.02em; }
   .phone-body { height: 340px; }
 }
 @media (max-width: 420px) { .brand-name { display: none; } }
+.footer-links { display: flex; justify-content: center; gap: 1.2rem; margin-bottom: 0.6rem; flex-wrap: wrap; }
+.footer-links a { color: var(--muted); text-decoration: none; font-weight: 500; }
+.footer-links a:hover { color: var(--accent); }

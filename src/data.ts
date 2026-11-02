@@ -6,6 +6,8 @@ export const profile = {
   location: 'Caleta Olivia, Santa Cruz, Argentina',
   email: 'emartinezd16@gmail.com',
   github: 'https://github.com/eMartinez16',
+  linkedin: 'https://www.linkedin.com/in/emiliano-mart%C3%ADnez-751407201/',
+  workana: 'https://www.workana.com/freelancer/e285e97d38526e193738589dcf43af15',
 }
 
 export type Tag = 'IA' | 'Automatización' | 'n8n' | 'Juegos' | 'Python'

@@ -144,7 +144,7 @@ export default function App() {
                 <strong>AWS Certified Developer – Associate</strong>.
               </p>
               <p>
-                También trabajo como freelancer en <strong>Workana</strong>, ayudando a comercios a
+                También trabajo como freelancer en <a href={profile.workana} target="_blank" rel="noopener noreferrer"><strong>Workana</strong></a>, ayudando a comercios a
                 automatizar la atención y la toma de pedidos.
               </p>
             </div>
@@ -295,17 +295,35 @@ export default function App() {
               <a className="btn primary" href={`mailto:${profile.email}`}>
                 ✉️ {profile.email}
               </a>
+              <a className="btn" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+              <a className="btn" href={profile.workana} target="_blank" rel="noopener noreferrer">
+                Workana
+              </a>
               <a className="btn" href={profile.github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </div>
-            <p className="muted small-text">También me encontrás como freelancer en Workana.</p>
+            <p className="muted small-text">
+              También me encontrás como freelancer en{' '}
+              <a href={profile.workana} target="_blank" rel="noopener noreferrer">
+                Workana
+              </a>
+              .
+            </p>
           </div>
         </section>
       </main>
 
       <footer className="footer">
         <div className="container">
+          <div className="footer-links">
+            <a href={`mailto:${profile.email}`}>Email</a>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href={profile.workana} target="_blank" rel="noopener noreferrer">Workana</a>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
           © {new Date().getFullYear()} {profile.fullName} · {profile.location}
         </div>
       </footer>
