@@ -137,7 +137,7 @@ export const experience: Job[] = [
     company: 'Inisoft',
     period: 'Feb 2024 – actualidad',
     description:
-      'Desarrollo y mantenimiento de una aplicación multiempresa e integración de varias aplicaciones en un único sistema. Trabajo con monorepos, APIs REST y frontend en Angular, Vue y React.',
+      'Desarrollo y mantenimiento de una aplicación multiempresa e integración de varias aplicaciones en un único sistema. Trabajo con monorepos, APIs REST y frontend, principalmente en Angular y también con Vue y React.',
     highlights: [
       'Visión por computadora: participé en un proyecto de revisión y etiquetado de imágenes de farmacias, con tags, categorías, OCR y paneles en Grafana.',
       'Automatización con n8n: un flujo crea tickets en Jira a partir de los correos de soporte, sin cargarlos a mano.',
@@ -151,7 +151,7 @@ export const experience: Job[] = [
     company: 'Syloper',
     period: 'Ene 2022 – Ene 2024',
     description:
-      'Desarrollo y mantenimiento de múltiples aplicaciones, APIs REST y monolitos. Trabajé con monorepos y frontend en Angular, Vue y React.',
+      'Desarrollo y mantenimiento de múltiples aplicaciones, APIs REST y monolitos. Trabajé con monorepos y frontend, principalmente en Angular y también con Vue y React.',
     stack: ['CakePHP 3/4', 'Laravel 8', 'Angular', 'Vue', 'React', 'TypeScript', 'Node.js', 'MySQL', 'Docker'],
   },
   {

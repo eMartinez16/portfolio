@@ -134,8 +134,8 @@ export default function App() {
               <p>
                 Soy desarrollador full stack con experiencia en empresas de software desde 2021: empecé
                 como backend junior y hoy trabajo en todo el stack, con <strong>PHP</strong> (Laravel,
-                CakePHP), <strong>Node.js</strong> (NestJS), <strong>Angular</strong>, <strong>Vue</strong> y{' '}
-                <strong>React</strong>, APIs REST, monorepos y bases de datos relacionales, usando <strong>Docker</strong> y CI/CD en el día a día.
+                CakePHP), <strong>Node.js</strong> (NestJS), <strong>Angular</strong> (y también Vue y
+                React), APIs REST, monorepos y bases de datos relacionales, usando <strong>Docker</strong> y CI/CD en el día a día.
               </p>
               <p>
                 En paralelo me estoy especializando en <strong>IA aplicada</strong>: armo bots y
