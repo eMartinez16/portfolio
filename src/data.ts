@@ -120,18 +120,6 @@ export const projects: Project[] = [
     ],
     note: 'Repositorio privado.',
   },
-  {
-    id: 'n8n-jira',
-    title: 'Automatización de Jira con n8n',
-    summary:
-      'Flujos de n8n que automatizan tareas repetitivas alrededor de Jira para un equipo de desarrollo.',
-    tags: ['Automatización', 'n8n'],
-    stack: ['n8n', 'Jira', 'Docker'],
-    details: [
-      'Automatiza pasos manuales del flujo de trabajo de tickets.',
-      'Proyecto interno de trabajo: el código no es público.',
-    ],
-  },
 ]
 
 export type Job = {
@@ -139,6 +127,7 @@ export type Job = {
   company: string
   period: string
   description: string
+  highlights?: string[]
   stack: string[]
 }
 
@@ -148,15 +137,22 @@ export const experience: Job[] = [
     company: 'Inisoft',
     period: 'Feb 2024 – actualidad',
     description:
-      'Desarrollo y mantenimiento de una aplicación multiempresa. Integración de varias aplicaciones en un único sistema.',
-    stack: ['Laravel', 'NestJS', 'Angular', 'Node.js', 'MySQL', 'Docker'],
+      'Desarrollo y mantenimiento de una aplicación multiempresa e integración de varias aplicaciones en un único sistema. Trabajo con monorepos, APIs REST y frontend en Angular, Vue y React.',
+    highlights: [
+      'Visión por computadora: participé en un proyecto de revisión y etiquetado de imágenes de farmacias, con tags, categorías, OCR y paneles en Grafana.',
+      'Automatización con n8n: un flujo crea tickets en Jira a partir de los correos de soporte, sin cargarlos a mano.',
+      'Importador de archivos Excel conectado a SQL Server mediante n8n. Se eligió esta solución para no modificar el sistema legado del cliente.',
+      'Documentación técnica y ADR (registros de decisiones de arquitectura).',
+    ],
+    stack: ['Laravel', 'NestJS', 'Angular', 'Vue', 'React', 'Node.js', 'MySQL', 'Docker'],
   },
   {
     role: 'Full Stack Developer',
     company: 'Syloper',
     period: 'Ene 2022 – Ene 2024',
-    description: 'Desarrollo y mantenimiento de múltiples aplicaciones, APIs REST y monolitos.',
-    stack: ['CakePHP 3/4', 'Laravel 8', 'Angular', 'TypeScript', 'Node.js', 'MySQL', 'Docker'],
+    description:
+      'Desarrollo y mantenimiento de múltiples aplicaciones, APIs REST y monolitos. Trabajé con monorepos y frontend en Angular, Vue y React.',
+    stack: ['CakePHP 3/4', 'Laravel 8', 'Angular', 'Vue', 'React', 'TypeScript', 'Node.js', 'MySQL', 'Docker'],
   },
   {
     role: 'Junior Backend Developer',
@@ -169,10 +165,12 @@ export const experience: Job[] = [
 
 export const skills: { group: string; items: string[] }[] = [
   { group: 'Backend', items: ['PHP', 'Laravel', 'CakePHP', 'Node.js', 'NestJS'] },
-  { group: 'Frontend', items: ['TypeScript', 'JavaScript', 'Angular'] },
-  { group: 'Datos', items: ['MySQL', 'PostgreSQL'] },
+  { group: 'Frontend', items: ['TypeScript', 'JavaScript', 'Angular', 'Vue', 'React'] },
+  { group: 'Datos', items: ['MySQL', 'PostgreSQL', 'SQL Server'] },
   { group: 'DevOps', items: ['Docker', 'CI/CD', 'Git', 'Linux'] },
-  { group: 'IA y automatización', items: ['n8n', 'Gemini', 'RAG', 'Agentes de IA'] },
+  { group: 'IA y automatización', items: ['n8n', 'Gemini', 'RAG', 'Agentes de IA', 'Visión por computadora', 'OCR'] },
+  { group: 'Desarrollo asistido por IA', items: ['Claude', 'Grok'] },
+  { group: 'Prácticas', items: ['Monorepos', 'APIs REST', 'Documentación técnica', 'ADR'] },
 ]
 
 export const education = [

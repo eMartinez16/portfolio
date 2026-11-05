@@ -158,8 +158,8 @@ h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.02em; }
 
 /* experience */
 .timeline { list-style: none; margin: 0; padding: 0 0 0 1.4rem; border-left: 2px solid var(--border); }
-.timeline li { position: relative; padding: 0 0 1.8rem 0.6rem; }
-.timeline li::before {
+.timeline > li { position: relative; padding: 0 0 1.8rem 0.6rem; }
+.timeline > li::before {
   content: ''; position: absolute; left: -1.95rem; top: 0.35rem; width: 14px; height: 14px; border-radius: 50%;
   background: var(--bg); border: 3px solid var(--accent);
 }
@@ -167,6 +167,7 @@ h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); letter-spacing: -0.02em; }
 .tl-head h3 { font-size: 1.1rem; margin-bottom: 0.2rem; }
 .period { color: var(--muted); font-size: 0.9rem; }
 .timeline p { color: var(--muted); margin: 0.2rem 0 0.6rem; }
+.tl-points { color: var(--muted); margin: 0 0 0.8rem; padding-left: 1.1rem; display: grid; gap: 0.4rem; }
 .two-col { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem; margin-top: 2rem; }
 .sub { font-size: 1.15rem; }
 .skills { display: grid; gap: 0.9rem; }
